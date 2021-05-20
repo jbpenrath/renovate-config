@@ -1,0 +1,39 @@
+{
+  "commitMessageAction": "update",
+  "commitMessagePrefix": "⬆️(dependencies)",
+  "commitMessageTopic": "{{depName}}",
+  "enabledManagers": [
+    "npm",
+    "setup-cfg"
+  ],
+  "extends": [
+    "config:base"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "groupName": "npm dependencies"
+    },
+    {
+      "matchManagers": [
+        "setup-cfg"
+      ],
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "groupName": "python dependencies"
+    }
+  ],
+  "semanticCommits": "disabled",
+  "separateMajorMinor": false,
+  "updateNotScheduled": true,
+  "rebaseWhen": "behind-base-branch"
+}
